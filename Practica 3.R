@@ -76,7 +76,6 @@ quantile(altura,seq(0,1,0.10),na.rm=TRUE) #DECILES (10)
 IQR(altura)
 
 #EJERCICIO 7. NUMEROS RESUMEN
-
 #a) DETERMINAR LOS CINCO NUMEROS RESUMEN DE LAS VARIABLES JUNTO CON SU MEDIA
 fivenum(altura)
 summary(altura)
@@ -104,7 +103,6 @@ boxplot(altura,horizontal=TRUE,main="Boxplot de Altura",ylab="Metros",col="Light
 boxplot(altura~datos$Grado,horizontal=TRUE,main="Boxplot de Altura",ylab="Metros",col="Light Blue", notch=FALSE)
 
 # EJERCICIO 9. ESTADISTICOS DE FORMA
-
 #a) DETERMINAR LA SIMETRIA DE SUS DISTRIBUCIONES
 skewness(altura) #ASIMETRIA
 
