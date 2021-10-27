@@ -88,7 +88,6 @@ by(altura, datos$Grado,FUN=summary)
 
 #a) TRAZAR UN DIAGRAMA DE CAJA BASICO
 boxplot(altura)
-
 #b) REPETIR EL APARTADO ANTERIOR DANDO COLOR A LA CAJA Y AÑADIENDO ALGUN TITUTLO AL GRAFICO
 boxplot(altura,main="Boxplot de Altura",ylab="Metros",col="Light Blue", notch=TRUE)
 
