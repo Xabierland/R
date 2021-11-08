@@ -35,6 +35,7 @@ str(grado.f)
 summary(grado)
 summary(grado.f)
 
+
 #         Ejercicio 4
 #a)
 v<-scan();v
@@ -43,9 +44,10 @@ v[7:8]<-c(NA,1);v
 #c)
 sum(v, na.rm = TRUE)
 #d)
+is.na(v)
 which(is.na(v))
 #e)
-v2<-v(is.na(v));v2
+v2<-(is.na(v));v2
 
 #         Ejercicio 6
 df<-data.frame(edad,peso,grado);df
@@ -55,7 +57,6 @@ df$Edad
 attach(df)
 Edad
 detach(df)
-Edad
 #busqueda logia en data frames
 df
 mec<-subset(df,Grado=="M");mec
