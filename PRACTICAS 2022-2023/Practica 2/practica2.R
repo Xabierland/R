@@ -1,5 +1,6 @@
 setwd("C:/Users/xabie/Documents/GitHub/R/PRACTICAS 2022-2023/Practica 2/")
 #===============================================================================EJEMPLOS
+#====
 #EJEMPLO 1
 grietas<-c(50,68,84,86,64,67,78,87,110,85,52,65,52,93,72,70,105,85,30,42,74,30,70,65,49)#Introducir datos
 limites<-c(30,40,50,60,70,75,85,90,110,Inf)#Límite de cada intervalo
@@ -47,8 +48,9 @@ quantile(datos,type=2)
 quantile(datos,probs=seq(0,1,0.1),type=2)
 quantile(datos,probs=seq(0,1,0.01),type=2)
 quantile(datos,0.4,type=2)
-
+#====
 #===============================================================================EJERCICIO1
+#====
 #EJERCICIO 1
 #a)
 tornillos<-c(1,2,3,3,2,1,2,5,2,4,4,4,5,3,2,5,3,4,1,4,2,3,1,1,2,5,3,4,1,3)
@@ -58,8 +60,9 @@ a<-data.frame(table(tornillos));a
 barplot(table(tornillos))
 #c)
 pie(table(tornillos), labels = c("muy fino", "fino", "mediano", "grueso", "muy grueso"))
-
+#====
 #===============================================================================EJERCICIO2
+#====
 #EJERCICIO 2
 #a)
 tension_rotura <- read.table(file="Tensión_rotura.txt",header=TRUE,dec=",")
@@ -85,8 +88,9 @@ CV<-des.tip/mean(datos2);CV
 quantile(datos2, type=2)
 quantile(datos2, probs=seq(0,1,0.1), type=2)
 quantile(datos2, probs=seq(0,1,0.01), type=2)
-
+#====
 #===============================================================================EJERCICIO3
+#====
 #EJERCICIO 3
 #a)
 torsion<-c(33,21,32,44,35,22,40,36,22,37,20,37,42,31,23,44,32,30,44,44,42,35,40,36,32,31,36,43,24,40,25,30,26,35,33,41,25,44,36,27);torsion
