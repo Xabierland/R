@@ -95,7 +95,7 @@ quantile(datos2, probs=seq(0,1,0.01), type=2)
 #a)
 torsion<-c(33,21,32,44,35,22,40,36,22,37,20,37,42,31,23,44,32,30,44,44,42,35,40,36,32,31,36,43,24,40,25,30,26,35,33,41,25,44,36,27);torsion
 limites3<-c(20,24,28,32,36,40,44)
-torsion.limite<-cut(torsion, limites3, right = F); torsion.limite
+torsion.limite<-cut(torsion, limites3, right = F, include.lowest=T); torsion.limite
 table(torsion.limite)
 #b)
 hist(torsion)
@@ -107,3 +107,4 @@ moda<-names(table(torsion))[which(table(torsion)==max(table(torsion)))];moda
 median(torsion)
 varianza<-var(torsion)*(length(torsion)-1)/length(torsion);varianza
 des.tip<-sqrt(varianza);des.tip
+
