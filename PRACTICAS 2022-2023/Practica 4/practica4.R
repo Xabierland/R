@@ -61,11 +61,26 @@ curve(dnorm(x,4,1),0,8,ylab="f(x)")
 ####EJERCICIOS
 ###1. Al año una consultoria de promedio da consejo a 1200 personas. En un momento al azar, calcule:
 ##a) La probabilidad de dar consejo a mas de 1085 personas.
-#P(X>=1085)->1-P(X<1085)->1-P(X<=1084)
-1-dpois(1084,1200)
+#P(X>1085)->1-P(X<=1085)
+1-dpois(1085,1200)
 ##b) La probabilidad de dar consejos entre 1200 y 1300 personas.
 #P(1200<=X<=1300)->P(X<=1300)-(1-P(X<=1199))
 ppois(1300,1200)-(1-ppois(1199,1200))
+
+###2.Un profesor ha realizado un test de 100 preguntas a 200 alumnos. Supóngase que las
+###puntuaciones de los alumnos siguen una distribución normal de media 60 y desviación típica 10.
+###Escogiendo un alumno al azar. Calcule:
+##a) P(X>70)->1-P(X<=70)
+1-pnorm(70,60,10)
+1-pnorm(1,0,1)
+##b)  P(39<X<80) -> P(X<80)-P(X<39)
+pnorm(80,60,10)-pnorm(39,60,10)
+##c)
+pnorm(80,60,10)-pnorm(40,60,10)
+##d)
+1-(pnorm(80,60,10)-pnorm(40,60,10))
+##e) P(x>=70)->1-P(x<=70)
+(1-pnorm(70,60,10))*200
 
 ###4. Supongase que un sistema se compone de 9 elementos y que para que el sistema funcione de forma correcta al menos seis de ellos deben estar operativos
 ##a) Si la probabilidad de que un elemento esta operativo es de 0.95, calcule la probabilidad de que todo el sistema funcione de forma correcta.
