@@ -3,16 +3,16 @@ setwd("C:/Users/xabie/Documents/GitHub/R/PRACTICAS 2022-2023/Practica 2/")
 #====
 #EJEMPLO 1
 grietas<-c(50,68,84,86,64,67,78,87,110,85,52,65,52,93,72,70,105,85,30,42,74,30,70,65,49)#Introducir datos
-limites<-c(30,40,50,60,70,75,85,90,110,Inf)#Límite de cada intervalo
+limites<-c(30,40,50,60,70,75,85,90,110,Inf)#L?mite de cada intervalo
 grietas.limite<-cut(grietas,limites,right=F)#Como los intervalos han de ser abiertos por la derecha: right=F
 grietas.limite
 table(grietas.limite)
 a<-as.data.frame(table(grietas.limite))#Hemos convertido la tabla en un marco de datos. Puede usarse solo "data.frame (...)"
 a
-Intervalos<-a$grietas.limite #Lo único que se ha hecho es crear un vector a partir de la primera columna del marco de datos con el nombre de "Intervalos".
-Frecuencia.abs<-a$Freq #Lo único que se ha hecho es crear un vector a partir de la segunda columna del marco de datos con el nombre de "Frecuencia.abs".
+Intervalos<-a$grietas.limite #Lo ?nico que se ha hecho es crear un vector a partir de la primera columna del marco de datos con el nombre de "Intervalos".
+Frecuencia.abs<-a$Freq #Lo ?nico que se ha hecho es crear un vector a partir de la segunda columna del marco de datos con el nombre de "Frecuencia.abs".
 sum(Frecuencia.abs)#Suma de todos los datos
-Frecuencia.rel<-Frecuencia.abs/25#Cálculo de la frecuencia relativa (recordad que "25" es el número de datos de este ejercicio)
+Frecuencia.rel<-Frecuencia.abs/25#C?lculo de la frecuencia relativa (recordad que "25" es el n?mero de datos de este ejercicio)
 Frecuencia.abs.acum<-cumsum(Frecuencia.abs)#Suma acumulada de las frecuencias absolutas
 Frecuencia.rel.acum<-cumsum(Frecuencia.rel)#Suma acumulada de las frecuencias relativas
 data.frame(Intervalos,Frecuencia.abs,Frecuencia.abs.acum,Frecuencia.rel,Frecuencia.rel.acum)
@@ -31,7 +31,7 @@ hist(longitudes)
 hist(longitudes,main="Histograma longitudes", xlab="Longitudes (cm)",ylab="Densidad", breaks=c(100,150,200,450), col="ORANGE")
 #EJEMPLO 5
 datos <- c(1,1,1,2,3,3,1,2,2,1,3,1,1)
-summary(datos) # Resumen de los principales estadísticos del vector "datos" 
+summary(datos) # Resumen de los principales estad?sticos del vector "datos" 
 mean(datos)#Media
 median(datos)#Mediana
 table(datos)
@@ -65,7 +65,7 @@ pie(table(tornillos), labels = c("muy fino", "fino", "mediano", "grueso", "muy g
 #====
 #EJERCICIO 2
 #a)
-tension_rotura <- read.table(file="Tensión_rotura.txt",header=TRUE,dec=",")
+tension_rotura <- read.table(file="Tension_rotura.txt",header=TRUE,dec=",")
 #b)
 tension_rotura
 datos2<-tension_rotura$Tension_rotura.Tn.cm2.
