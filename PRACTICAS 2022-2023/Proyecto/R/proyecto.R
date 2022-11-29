@@ -90,3 +90,7 @@ quantile(edadCiudad,probs=seq(0,1,0.01))
 var.test(edadPueblos,edadCiudad)$conf
 #No pasa por el 1 luego las varianzas son distintas
 t.test(edadPueblos,edadCiudad,var.equal = F)$conf
+
+#### CONTRASTE DE HIPOTESIS ####################################################
+t.test(edadPueblos, edadCiudad, var.equal = F)
+t.test(edadPueblos, edadCiudad, alternative = "greater", var.equal =F)
